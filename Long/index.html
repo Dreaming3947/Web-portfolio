@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Phạm Văn Phi Long — Portfolio</title>
+    <meta name="description" content="Portfolio của Phạm Văn Phi Long — Lập trình viên Java. Dự án, kỹ năng, liên hệ." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="features.css" />
+    <script src="script.js" defer></script>
+    <script src="main.js" defer></script>
+    <script src="features.js" defer></script>
+  </head>
+  <body class="theme-blue dark-mode">
+    <!-- Scroll Progress Indicator -->
+    <div id="scrollProgress"></div>
+    
+    <!-- Loading Screen -->
+    <div id="loadingScreen">
+      <div class="loader-content">
+        <div class="loader-logo">
+          <div class="logo-circle">
+            <span class="logo-text">PVPLong</span>
+          </div>
+          <div class="pulse-ring"></div>
+          <div class="pulse-ring pulse-ring-delayed"></div>
+        </div>
+        <div class="loader-dots">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <p class="loader-text">Đang tải Portfolio...</p>
+        <div class="loader-progress">
+          <div class="loader-bar">
+            <span class="loader-percentage">0%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container header-grid">
+        <a class="brand" href="#">PVPLong</a>
+        
+        <div class="header-controls">
+          <!-- Language Switcher -->
+          <button id="langToggle" class="icon-btn" aria-label="Chuyển ngôn ngữ" title="Switch Language">
+            <i class='bx bx-world'></i>
+          </button>
+          
+          <!-- Theme Toggle -->
+          <button id="themeToggle" class="icon-btn" aria-label="Chuyển theme" title="Toggle Theme">
+            <i class='bx bx-moon'></i>
+          </button>
+          
+          <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+        
+        <nav class="nav-links" aria-label="Main navigation">
+          <ul>
+            <li><a href="#about">Giới thiệu</a></li>
+            <li><a href="#experience">Kinh nghiệm</a></li>
+            <li><a href="#skills">Kỹ năng</a></li>
+            <li><a href="#projects">Dự án</a></li>
+            <li><a href="#album">Album</a></li>
+            <li><a href="#certificates">Chứng chỉ</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <!-- Floating particles -->
+        <div class="hero-particles">
+          <span class="particle"></span>
+          <span class="particle"></span>
+          <span class="particle"></span>
+          <span class="particle"></span>
+          <span class="particle"></span>
+          <span class="particle"></span>
+          <span class="particle"></span>
+          <span class="particle"></span>
+        </div>
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <div class="eyebrow">PORTFOLIO • JAVA DEVELOPER</div>
+            <h1>Xin chào, tôi là <span>Phạm Văn Phi Long</span></h1>
+            <p class="lead">
+              <span id="typingText"></span>
+              <span class="typing-cursor">|</span>
+            </p>
+            
+            <!-- Statistics Counter -->
+            <div class="stats-container">
+              <div class="stat-item">
+                <span class="stat-number" data-target="2">0</span>
+                <span class="stat-label">Dự án</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="4">0</span>
+                <span class="stat-label">Công nghệ</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="0">0</span>
+                <span class="stat-label">Năm kinh nghiệm</span>
+              </div>
+            </div>
+            
+            <div class="hero-cta">
+              <a class="btn primary ripple" href="#projects">Xem dự án</a>
+              <a class="btn outline ripple" href="#contact">Liên hệ</a>
+              <button id="downloadCV" class="btn outline ripple">
+                <i class='bx bx-download'></i>
+                <span>Tải CV</span>
+              </button>
+            </div>
+            <ul class="hero-meta">
+              <li>📍 TP. Hồ Chí Minh</li>
+              <li>🎓 Đại học Giao Thông Vận Tải</li>
+            </ul>
+            
+            <!-- Social Share -->
+            <div class="social-share">
+              <span class="share-label">Chia sẻ:</span>
+              <button class="share-btn" data-platform="copy" title="Copy link">
+                <i class='bx bx-link'></i>
+              </button>
+              <button class="share-btn" data-platform="facebook" title="Share on Facebook">
+                <i class='bx bxl-facebook'></i>
+              </button>
+              <button class="share-btn" data-platform="twitter" title="Share on Twitter">
+                <i class='bx bxl-twitter'></i>
+              </button>
+              <button class="share-btn" data-platform="linkedin" title="Share on LinkedIn">
+                <i class='bx bxl-linkedin'></i>
+              </button>
+            </div>
+          </div>
+          <div class="hero-media">
+            <img src="images/pic1.jpg" alt="Ảnh Phạm Văn Phi Long" class="avatar">
+          </div>
+        </div>
+        <div class="hero-wave" aria-hidden="true"></div>
+      </section>
+
+      <!-- About: personal info + quick contact + photo album -->
+      <section id="about" class="container about-card">
+        <div class="about-inner">
+          <h2>Giới thiệu</h2>
+          <p>Tôi là một lập trình viên trẻ giàu khát khao, chuyên về Java và kiến trúc backend. Tin rằng một dòng code tinh gọn có thể thay đổi trải nghiệm người dùng — tôi theo đuổi hiệu năng, tính bền vững và sự gọn ghẽ trong thiết kế phần mềm.</p>
+
+          <div class="about-grid-wide">
+            <!-- Left: personal details with info grid -->
+            <div class="about-left">
+              <h3>Thông tin cá nhân</h3>
+              <div class="info-grid">
+                <div class="info-item">
+                  <div class="info-icon"><i class="bx bx-user"></i></div>
+                  <div class="info-text"><b>Họ tên:</b><br>Phạm Văn Phi Long</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon"><i class="bx bx-cake"></i></div>
+                  <div class="info-text"><b>Ngày sinh:</b><br>26/03/2005</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon"><i class="bx bx-envelope"></i></div>
+                  <div class="info-text"><b>Email:</b><br><a href="mailto:longpvp3905@ut.edu.vn">longpvp3905@ut.edu.vn</a></div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon"><i class="bx bx-phone"></i></div>
+                  <div class="info-text"><b>Điện thoại:</b><br>032 6188 728</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon"><i class="bx bx-map"></i></div>
+                  <div class="info-text"><b>Địa chỉ:</b><br>Bình Thạnh, TP. HCM</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon"><i class="bx bxs-school"></i></div>
+                  <div class="info-text"><b>Trường:</b><br>ĐH Giao Thông Vận Tải</div>
+                </div>
+              </div>
+
+              <!-- Hobbies: với icon boxes -->
+              <div class="hobbies-block">
+                <h3>Sở thích</h3>
+                <div class="hobby-boxes">
+                  <div class="hobby-box">
+                    <i class="bx bx-code-alt"></i>
+                    <span>Lập trình</span>
+                  </div>
+                  <div class="hobby-box">
+                    <i class="bx bx-book"></i>
+                    <span>Đọc sách</span>
+                  </div>
+                  <div class="hobby-box">
+                    <i class="bx bx-music"></i>
+                    <span>Piano</span>
+                  </div>
+                  <div class="hobby-box">
+                    <i class='bx bxs-chess'></i>
+                    <span>Cờ vua</span>
+                  </div>
+                </div>
+                <ul>
+                  <li>💻 Sáng tạo cùng mã nguồn: Tôi dành thời gian thử nghiệm ý tưởng, viết prototype bằng Java và tinh chỉnh đến khi hài lòng với trải nghiệm.</li>
+                  <li>📚 Nâng tầm tri thức: Đọc sách chuyên môn và sách phát triển bản thân để liên tục mở rộng tư duy kỹ thuật và quản lý dự án.</li>
+                  <li>🎵 Âm nhạc và cảm hứng: Chơi piano giúp tôi cân bằng cảm xúc và tìm cảm hứng mới cho giải pháp phần mềm sáng tạo.</li>
+                  <li>♟️ Cờ vua chiến lược: Rèn luyện tầm nhìn, kiên nhẫn và lập kế hoạch — những phẩm chất quan trọng khi thiết kế hệ thống lớn.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right: photo album + quick contact -->
+            <aside class="about-right">
+              <div class="main-photo">
+                <!-- Single prominent personal photo (replace with your real photo) -->
+                <img id="mainPhoto" src="images/pic2.jpg" alt="Ảnh chính của Phạm Văn Phi Long">
+              </div>
+
+              <!-- Album thumbnails đã tách sang khu vực riêng (#album) để bố trí đẹp mắt và dễ xem hơn. -->
+
+              <div class="quick-contact">
+                <h4>Liên hệ nhanh</h4>
+                <ul>
+                  <li>
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                      <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    <strong>Email:</strong> <a href="mailto:longpvp3905@ut.edu.vn">longpvp3905@ut.edu.vn</a>
+                  </li>
+                  <li>
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    <strong>GitHub:</strong> <a href="https://github.com/Dreaming3947" target="_blank">/Dreaming3947</a>
+                  </li>
+                  <li>
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                    <strong>Facebook:</strong> <a href="https://www.facebook.com/bach.duong.934566" target="_blank">Bạch Dương</a>
+                  </li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+  <section id="experience" class="container section-panel">
+        <h2>Kinh nghiệm & Mục tiêu</h2>
+        <div class="timeline">
+          <div class="timeline-line"></div>
+          
+          <div class="timeline-item" data-year="2024">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2025</span>
+              <h3>💼 Thực tập & Dự án tiêu biểu</h3>
+              <p>Tôi đã tham gia thiết kế và triển khai hệ thống chat thời gian thực: client bằng Java Swing, giao tiếp qua socket, lưu trữ lịch sử và tối ưu truyền file. Qua dự án, tôi rèn kỹ năng xử lý đồng thời, quản lý trạng thái kết nối và đảm bảo dữ liệu nhất quán giữa client và server.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item" data-year="2025">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2026</span>
+              <h3>🎯 Tầm nhìn nghề nghiệp</h3>
+              <p>Mục tiêu của tôi là trở thành kỹ sư phần mềm đóng góp cho các hệ thống có quy mô—xây dựng API hiệu quả với Spring Boot, triển khai microservices và tận dụng cloud để tạo ra sản phẩm bền vững, dễ vận hành và mở rộng.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  <section id="skills" class="container section-panel">
+        <h2>Kỹ năng & Ngôn ngữ</h2>
+        
+        <!-- Skills Filter -->
+        <div class="skills-filter">
+          <button class="filter-btn active" data-filter="all">Tất cả</button>
+          <button class="filter-btn" data-filter="backend">Backend</button>
+          <button class="filter-btn" data-filter="database">Database</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill" data-category="backend">
+            <h3>☕ Java</h3>
+            <div class="progress-bar">
+              <div class="progress" data-width="85%"></div>
+            </div>
+            <p class="skill-desc">OOP, xử lý concurrency (threads, synchronization), thiết kế API và tối ưu hiệu năng backend. Áp dụng design patterns, refactor để tăng khả năng bảo trì. Thành thạo công cụ build (Maven/Gradle) và quản lý phiên bản với Git.</p>
+            <ul class="skill-list">
+              <li>Collections, Streams, Generics; Optional, Functional style</li>
+              <li>I/O/NIO, serialization, logging (SLF4J/Logback)</li>
+              <li>Unit test (JUnit/Mockito), cơ bản TDD</li>
+              <li>Refactor, Clean Code, SOLID</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">OOP</span>
+              <span class="tag">Concurrency</span>
+              <span class="tag">Design Patterns</span>
+              <span class="tag">Maven/Gradle</span>
+            </div>
+          </div>
+
+          <div class="skill" data-category="backend">
+            <h3>🍃 Spring Boot</h3>
+            <div class="progress-bar">
+              <div class="progress" data-width="80%"></div>
+            </div>
+            <p class="skill-desc">Xây dựng RESTful services, cấu hình security cơ bản, tích hợp JPA/Hibernate, phân tầng dịch vụ rõ ràng, và best practices cho testing/deployment.</p>
+            <ul class="skill-list">
+              <li>Spring Web, Spring Data JPA, Hibernate</li>
+              <li>Validation, Exception Handling, DTO mapping</li>
+              <li>Profiles, Configuration, Lombok, Actuator cơ bản</li>
+              <li>Swagger/OpenAPI mô tả API</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">REST API</span>
+              <span class="tag">JPA</span>
+              <span class="tag">Security</span>
+              <span class="tag">OpenAPI</span>
+            </div>
+          </div>
+
+          <div class="skill" data-category="database">
+            <h3>🗄️ SQL / MySQL</h3>
+            <div class="progress-bar">
+              <div class="progress" data-width="75%"></div>
+            </div>
+            <p class="skill-desc">Thiết kế schema hợp lý, tối ưu chỉ mục và truy vấn, quản trị transaction/migration, đảm bảo toàn vẹn dữ liệu.</p>
+            <ul class="skill-list">
+              <li>Joins, Subqueries, Views; Window functions cơ bản</li>
+              <li>Indexing, đọc Query Plan, tối ưu truy vấn</li>
+              <li>Stored Procedures/Triggers (mức cơ bản)</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Schema Design</span>
+              <span class="tag">Indexing</span>
+              <span class="tag">Query Tuning</span>
+            </div>
+          </div>
+
+          <div class="skill" data-category="frontend">
+            <h3>🌐 HTML / CSS / JS</h3>
+            <div class="progress-bar">
+              <div class="progress" data-width="90%"></div>
+            </div>
+            <p class="skill-desc">Xây dựng giao diện responsive, Grid/Flex layout, animation CSS3, tối ưu UX và accessibility cơ bản.</p>
+            <ul class="skill-list">
+              <li>Semantic HTML, Responsive design</li>
+              <li>CSS Variables, Transitions, Keyframes</li>
+              <li>Vanilla JS: DOM, Events, Accessibility cơ bản</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Responsive</span>
+              <span class="tag">Grid/Flex</span>
+              <span class="tag">Animation</span>
+            </div>
+          </div>
+
+          <div class="skill">
+            <h3>🛠️ Tools & Workflow</h3>
+            <p class="skill-desc">Quy trình làm việc hiệu quả với công cụ phổ biến cho phát triển phần mềm hiện đại.</p>
+            <ul class="skill-list">
+              <li>Git/GitHub: branching cơ bản, pull request</li>
+              <li>IDE: IntelliJ IDEA, VS Code; Debug cơ bản</li>
+              <li>Task management: Issues, Projects (Kanban)</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Git</span>
+              <span class="tag">GitHub</span>
+              <span class="tag">IntelliJ</span>
+              <span class="tag">VS Code</span>
+            </div>
+          </div>
+
+          <div class="skill">
+            <h3>💡 Soft Skills</h3>
+            <p class="skill-desc">Giao tiếp, hợp tác, kỷ luật và tư duy sản phẩm.</p>
+            <ul class="skill-list">
+              <li>Giao tiếp rõ ràng, ghi chú mạch lạc</li>
+              <li>Làm việc nhóm, review code tôn trọng</li>
+              <li>Tự học nhanh, thích nghi công nghệ mới</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Teamwork</span>
+              <span class="tag">Communication</span>
+              <span class="tag">Self-learning</span>
+            </div>
+          </div>
+
+          <div class="skill">
+            <h3>🌍 Ngôn ngữ</h3>
+            <ul class="skill-list">
+              <li>🇻🇳 Tiếng Việt: Thành thạo (giao tiếp, viết kỹ thuật)</li>
+              <li>🇬🇧 Tiếng Anh: Đọc hiểu tài liệu kỹ thuật tốt, giao tiếp cơ bản nơi làm việc</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+  <section id="projects" class="container section-panel">
+        <h2>Dự án nổi bật</h2>
+        <div class="project-grid">
+          <article class="project-flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="images/project1.jpg" alt="PlanBookAI" class="project-image">
+                <div class="project-overlay">
+                  <h3>PlanbookAI</h3>
+                  <p>AI-powered Lesson Planning</p>
+                  <span class="flip-hint">Click để xem chi tiết</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h3>PlanbookAI</h3>
+                <p class="project-desc"><strong>Mô tả:</strong> Hệ thống hỗ trợ giáo viên soạn giáo án tự động bằng AI. Ứng dụng phân tích yêu cầu giảng dạy và tạo nội dung bài học phù hợp với chương trình, tiết kiệm thời gian chuẩn bị và nâng cao chất lượng giáo án.</p>
+                <p class="project-desc"><strong>Vai trò:</strong> Thành viên phát triển backend. Làm việc trên API tạo nội dung bài giảng, tích hợp mô-đun AI và tối ưu dữ liệu cho giáo viên.</p>
+                <div class="project-tech">
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">Spring Boot</span>
+                  <span class="tech-tag">AI Integration</span>
+                </div>
+                <a class="project-link ripple" href="https://github.com/PlanBookAI/PlanBookAI" target="_blank" rel="noopener">
+                  <i class='bx bxl-github'></i> Xem trên GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="images/project2.png" alt="Chat App" class="project-image">
+                <div class="project-overlay">
+                  <h3>Chat đa người dùng</h3>
+                  <p>Real-time Messaging System</p>
+                  <span class="flip-hint">Click để xem chi tiết</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h3>Ứng dụng Chat đa người dùng</h3>
+                <p class="project-desc"><strong>Mô tả:</strong> Hệ thống chat thời gian thực hỗ trợ nhiều người dùng kết nối đồng thời. Ứng dụng sử dụng Java Swing cho giao diện, socket cho truyền thông tin và MySQL để lưu trữ lịch sử tin nhắn, hỗ trợ gửi file và quản lý phòng chat.</p>
+                <p class="project-desc"><strong>Vai trò:</strong> Thành viên phát triển backend. Phát triển client bằng Java Swing, thiết kế giao thức socket và lưu trữ lịch sử chat trên server.</p>
+                <div class="project-tech">
+                  <span class="tech-tag">Java Swing</span>
+                  <span class="tech-tag">Socket</span>
+                  <span class="tech-tag">MySQL</span>
+                </div>
+                <a class="project-link ripple" href="https://github.com/KhanhNNV/LTM_BoxChat" target="_blank" rel="noopener">
+                  <i class='bx bxl-github'></i> Xem trên GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Album: slider với prev/next arrows -->
+  <section id="album" class="container album-section section-panel">
+        <h2>Album ảnh</h2>
+        <p class="album-note">Trượt qua các ảnh bằng nút mũi tên hoặc vuốt (trên di động)</p>
+        
+        <div class="slider-container">
+          <div class="slides">
+            <img src="images/pic3.jpg" alt="Ảnh 1">
+            <img src="images/pic4.jpg" alt="Ảnh 2">
+            <img src="images/pic5.jpg" alt="Ảnh 3">
+            <img src="images/pic6.jpg" alt="Ảnh 4">
+          </div>
+          <button class="arrow prev" aria-label="Ảnh trước">‹</button>
+          <button class="arrow next" aria-label="Ảnh sau">›</button>
+        </div>
+      </section>
+
+      <!-- Certificates Gallery -->
+      <section id="certificates" class="container section-panel">
+        <h2>Chứng chỉ & Thành tích</h2>
+        <div class="certificates-grid">
+          <div class="certificate-item" data-cert="1">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%234a90e2;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%2300e6b8;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='300' fill='url(%23grad1)'/%3E%3Crect x='20' y='20' width='360' height='260' fill='none' stroke='white' stroke-width='3' opacity='0.3'/%3E%3Ctext x='200' y='120' text-anchor='middle' fill='white' font-size='40' font-family='Arial' font-weight='bold'%3E☕%3C/text%3E%3Ctext x='200' y='160' text-anchor='middle' fill='white' font-size='24' font-family='Arial' font-weight='bold'%3EJava Programming%3C/text%3E%3Ctext x='200' y='190' text-anchor='middle' fill='white' font-size='16' font-family='Arial' opacity='0.9'%3EAdvanced Certificate%3C/text%3E%3C/svg%3E" alt="Java Certificate">
+            <div class="certificate-overlay">
+              <h4>Java Programming</h4>
+              <p>Advanced Certificate</p>
+              <button class="view-cert-btn" data-cert="1">
+                <i class='bx bx-search-alt'></i> Xem chi tiết
+              </button>
+            </div>
+          </div>
+          
+          <div class="certificate-item" data-cert="2">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23e67e22;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%23f39c12;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='300' fill='url(%23grad2)'/%3E%3Crect x='20' y='20' width='360' height='260' fill='none' stroke='white' stroke-width='3' opacity='0.3'/%3E%3Ctext x='200' y='120' text-anchor='middle' fill='white' font-size='40' font-family='Arial' font-weight='bold'%3E🍃%3C/text%3E%3Ctext x='200' y='160' text-anchor='middle' fill='white' font-size='24' font-family='Arial' font-weight='bold'%3ESpring Framework%3C/text%3E%3Ctext x='200' y='190' text-anchor='middle' fill='white' font-size='16' font-family='Arial' opacity='0.9'%3EProfessional Level%3C/text%3E%3C/svg%3E" alt="Spring Certificate">
+            <div class="certificate-overlay">
+              <h4>Spring Framework</h4>
+              <p>Professional Level</p>
+              <button class="view-cert-btn" data-cert="2">
+                <i class='bx bx-search-alt'></i> Xem chi tiết
+              </button>
+            </div>
+          </div>
+          
+          <div class="certificate-item" data-cert="3">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2327ae60;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%232ecc71;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='300' fill='url(%23grad3)'/%3E%3Crect x='20' y='20' width='360' height='260' fill='none' stroke='white' stroke-width='3' opacity='0.3'/%3E%3Ctext x='200' y='120' text-anchor='middle' fill='white' font-size='40' font-family='Arial' font-weight='bold'%3E🗄️%3C/text%3E%3Ctext x='200' y='160' text-anchor='middle' fill='white' font-size='24' font-family='Arial' font-weight='bold'%3EDatabase Design%3C/text%3E%3Ctext x='200' y='190' text-anchor='middle' fill='white' font-size='16' font-family='Arial' opacity='0.9'%3EMySQL Mastery%3C/text%3E%3C/svg%3E" alt="Database Certificate">
+            <div class="certificate-overlay">
+              <h4>Database Design</h4>
+              <p>SQL & MySQL Mastery</p>
+              <button class="view-cert-btn" data-cert="3">
+                <i class='bx bx-search-alt'></i> Xem chi tiết
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certificate Lightbox Modal -->
+      <div id="certificateModal" class="cert-modal">
+        <div class="cert-modal-content">
+          <button class="cert-modal-close" aria-label="Close">
+            <i class='bx bx-x'></i>
+          </button>
+          <img id="certModalImage" src="" alt="Certificate">
+          <div class="cert-modal-info">
+            <h3 id="certModalTitle"></h3>
+            <p id="certModalDesc"></p>
+          </div>
+          <div class="cert-modal-nav">
+            <button class="cert-nav-btn cert-prev">
+              <i class='bx bx-chevron-left'></i> Trước
+            </button>
+            <button class="cert-nav-btn cert-next">
+              Sau <i class='bx bx-chevron-right'></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Preview Section -->
+      <section id="blog" class="container section-panel">
+        <h2>Blog & Bài viết</h2>
+        <p class="section-subtitle">Chia sẻ kiến thức và kinh nghiệm lập trình</p>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="images/blog1.jpg" alt="Blog post" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22250%22%3E%3Crect width=%22400%22 height=%22250%22 fill=%22%234a90e2%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2230%22 font-family=%22Arial%22%3EBlog Post%3C/text%3E%3C/svg%3E'">
+              <span class="blog-category">Java</span>
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-date"><i class='bx bx-calendar'></i> 15/01/2025</span>
+                <span class="blog-read-time"><i class='bx bx-time'></i> 5 phút đọc</span>
+              </div>
+              <h3>Tối ưu hiệu năng với Java Streams</h3>
+              <p>Khám phá các kỹ thuật sử dụng Stream API hiệu quả để xử lý dữ liệu lớn trong Java...</p>
+              <a href="#" class="blog-read-more">Đọc thêm <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="images/blog2.jpg" alt="Blog post" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22250%22%3E%3Crect width=%22400%22 height=%22250%22 fill=%22%23e67e22%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2230%22 font-family=%22Arial%22%3EBlog Post%3C/text%3E%3C/svg%3E'">
+              <span class="blog-category">Spring Boot</span>
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-date"><i class='bx bx-calendar'></i> 10/01/2025</span>
+                <span class="blog-read-time"><i class='bx bx-time'></i> 8 phút đọc</span>
+              </div>
+              <h3>Xây dựng RESTful API với Spring Boot</h3>
+              <p>Hướng dẫn chi tiết từ cơ bản đến nâng cao về cách tạo API chuẩn REST với Spring Boot...</p>
+              <a href="#" class="blog-read-more">Đọc thêm <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="images/blog3.jpg" alt="Blog post" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22250%22%3E%3Crect width=%22400%22 height=%22250%22 fill=%22%2327ae60%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2230%22 font-family=%22Arial%22%3EBlog Post%3C/text%3E%3C/svg%3E'">
+              <span class="blog-category">Database</span>
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-date"><i class='bx bx-calendar'></i> 05/01/2025</span>
+                <span class="blog-read-time"><i class='bx bx-time'></i> 6 phút đọc</span>
+              </div>
+              <h3>Tối ưu hóa truy vấn SQL</h3>
+              <p>Các kỹ thuật và best practices để tối ưu hiệu năng database với indexing và query tuning...</p>
+              <a href="#" class="blog-read-more">Đọc thêm <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact: full form + instructions for Formspree -->
+      <section id="contact" class="container contact-card">
+        <h2>Liên hệ</h2>
+        <div class="contact-grid">
+          <!-- Full form: you can replace action with Formspree endpoint for production -->
+          <form class="contact-form" action="mailto:longpvp3905@ut.edu.vn" method="post" enctype="text/plain">
+            <label for="name">Họ và tên</label>
+            <input id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+
+            <label for="message">Nội dung</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <div class="form-actions"><button type="submit" class="btn primary">Gửi</button></div>
+          </form>
+
+          <aside class="contact-info">
+            <h3>Hoặc kết nối trực tiếp</h3>
+            <ul>
+              <li>
+                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="5" width="18" height="14" rx="2"/>
+                  <path d="M3 7l9 6 9-6"/>
+                </svg>
+                <strong>Email:</strong> <a href="mailto:longpvp3905@ut.edu.vn">longpvp3905@ut.edu.vn</a>
+              </li>
+              <li>
+                <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <strong>GitHub:</strong> <a href="https://github.com/Dreaming3947" target="_blank">/Dreaming3947</a>
+              </li>
+              <li>
+                <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                <strong>Facebook:</strong> <a href="https://www.facebook.com/bach.duong.934566" target="_blank">Bạch Dương</a>
+              </li>
+            </ul>
+            <p class="note">Tôi trả lời email thường trong 48 giờ. Đính kèm mô tả ngắn và file liên quan (nếu có).</p>  
+          </aside>
+        </div>
+      </section>
+
+      <!-- Back to top button -->
+      <button id="toTop" aria-label="Lên đầu trang" title="Lên đầu trang">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 4l-7 7h4v7h6v-7h4z"/>
+        </svg>
+      </button>
+    </main>
+
+    <!-- Thank You Popup -->
+    <div id="thankYouPopup" class="popup">
+      <div class="popup-box">
+        <button class="close-btn" aria-label="Đóng">×</button>
+        <div class="circle">
+          <div class="checkmark"></div>
+        </div>
+        <h2>Cảm ơn bạn!</h2>
+        <p>Tin nhắn của bạn đã được gửi thành công. Tôi sẽ phản hồi sớm nhất có thể.</p>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year">2025</span> Phạm Văn Phi Long — Built with care.</p>
+      </div>
+    </footer>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor">
+      <div class="cursor-dot"></div>
+      <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Easter Egg: Secret Achievement -->
+    <div id="easterEgg" class="easter-egg hidden">
+      <div class="easter-content">
+        <i class='bx bx-trophy'></i>
+        <h3>🎉 Thành tích mở khóa!</h3>
+        <p>Bạn đã khám phá ra bí mật! Cảm ơn bạn đã tìm hiểu kỹ về portfolio của tôi.</p>
+        <button class="easter-close">Đóng</button>
+      </div>
+    </div>
+  </body>
+</html>
